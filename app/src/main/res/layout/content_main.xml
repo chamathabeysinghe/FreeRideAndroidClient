@@ -7,11 +7,24 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.codepathz.freeride.MainActivity"
     tools:showIn="@layout/activity_main">
-
-    <Button
-        android:text="Button"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+        android:text="User Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/userRegButton"
         android:elevation="0dp" />
+
+        <Button
+            android:text="Vehicle Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vehicRegister"
+            android:elevation="0dp" />
+
+    </LinearLayout>
+
 </android.support.v4.widget.NestedScrollView>

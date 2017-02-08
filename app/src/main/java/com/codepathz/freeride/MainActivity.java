@@ -13,7 +13,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mButton;
+    private Button userRegisterButton;
+    private Button vehicleRegisterButton;
 
 
     @Override
@@ -22,14 +23,22 @@ public class MainActivity extends AppCompatActivity {
         this.setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        final Intent registerIntent =new Intent(this,UserResigisterActivity.class);
+        final Intent userRegisterIntent =new Intent(this,UserResigisterActivity.class);
+        final Intent vehicleRegisterIntent =new Intent(this,VehicleRegisterActivity.class);
 
-        mButton= (Button) findViewById(R.id.userRegButton);
+        userRegisterButton = (Button) findViewById(R.id.userRegButton);
+        vehicleRegisterButton= (Button) findViewById(R.id.vehicRegister);
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+        userRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(registerIntent);
+                startActivity(userRegisterIntent);
+            }
+        });
+        vehicleRegisterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(vehicleRegisterIntent);
             }
         });
 

@@ -6,14 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.codepathz.freeride.utils.UserDataQuery;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -63,7 +62,7 @@ public class VehicleRegisterActivity extends AppCompatActivity implements View.O
                 params.put("number",number);
                 params.put("type",type);
                 params.put("color",color);
-                params.put("driverId",String.valueOf(driverId));
+                params.put("driverId", UserDataQuery.findUserCode());
                 return params;
             }
         };
